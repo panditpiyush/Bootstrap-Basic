@@ -1,0 +1,1731 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .overflow {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    footer {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    }
+</style>
+
+<body class="overflow-hidden">
+    <div class="container-fluid bg-light">
+        <div class="row ">
+            <div class="col m-2">
+                <a class="btn btn-primary rounded-circle bg-light border-dark float-start me-2" data-toggle="tooltip"
+                    title="Message" style="opacity: 0.8;" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                    role="button" aria-controls="offcanvasExample">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list text-dark" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">myCare Home Page </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            Some text as placeholder. In real life you can have the elements you have chosen. Like,
+                            text, images, lists, etc.
+                        </div>
+                    </div>
+                </div>
+                <h4 style="opacity:0.7" class="mt-1" data-toggle="tooltip" title="myCare report">myCare-UT</h4>
+            </div>
+            <div class="col">
+                <div class="float-end">
+                    <button type="button" class="btn btn-light rounded-circle border-dark  me-2" style="opacity: 0.8;"
+                        data-toggle="tooltip" title="Attachment"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-aspect-ratio" style="opacity: 0.8;"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                            <path
+                                d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-circle border-dark  me-2" style="opacity: 0.8;"
+                        data-toggle="tooltip" title="Message"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-chat-right-fill border-dark "
+                            style="opacity: 0.8;" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-circle border-dark  me-2" style="opacity: 0.8;"
+                        data-toggle="tooltip" title="Mail"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-envelope-fill" style="opacity: 0.8;"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-circle border-dark  " style="opacity: 0.8;"
+                        data-toggle="tooltip" title="Alert"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-light" style="opacity: 0.8;"><img
+                            src="PROFILE-PIYUSHPANDIT.jpg" width="35" height="40"
+                            class="rounded-circle border border-dark m-0">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle p-0 " type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <b>Admin</b> as Admin
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-between" style="background-color: rgb(34, 94, 146); height: 39px;">
+            <div class="col-4  ">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" data-toggle="tooltip" title="Home"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill text-white mt-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                                </svg></i></a></li>
+                        <li class="breadcrumb-item active text-white mt-2" aria-current="page" data-toggle="tooltip"
+                            title="Op Bill">OP BILL</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-3">
+                <p class="text-white mt-2 float-end"> Multi Facility Selected! <i
+                        class="bi bi-newspaper ms-1 border border-white rounded-circle p-1" data-toggle="tooltip"
+                        title="News"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="row g-2">
+        <div class="col-3">
+            <div class="container-fluid  shadow-lg ">
+                <div class="row mt-2">
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Patient Name</b></lead><br>
+                        <lead>Shankar</lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Gender</b></lead><br>
+                        <lead>Male</lead>
+                    </div>
+                    <div class="col">
+                        <div class="btn-group mt-1" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-light border" data-toggle="tooltip" title="Search"><i
+                                    class="bi bi-search"></i></button>
+                            <button type="button" class="btn btn-light border" data-toggle="tooltip" title="Reload"><i
+                                    class="bi bi-arrow-repeat"></i></button>
+                            <button type="button" class="btn btn-light border" data-toggle="tooltip"
+                                title="Attachment"><i class="bi bi-paperclip"></i></button>
+                            <div class="dropdown">
+                                <button class="btn btn-light rounded-0 border rounded-end dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <lead style="opacity:0.8"><b>MRN</b></lead><br>
+                        <lead>202345565676675 [Temp]</lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>DOB</b></lead><br>
+                        <lead>29/12/1999 23 years</lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Status</b></lead><br>
+                        <lead class="text-success"><b>Active</b></lead>
+                    </div>
+                </div>
+                <div class="row mt-2" style="height:60px">
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>National ID</b></lead><br>
+                        <lead>202345565</lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Outstanding</b></lead><br>
+                        <lead class="text-success"><b><u>0.000000</u></b></lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Deposit</b></lead><br>
+                        <lead class="text-success"><b><u>64,124.100</u></b></lead>
+                    </div>
+                    <div class="col">
+                        <lead style="opacity:0.8"><b>Category</b></lead><br>
+                        <lead>General</lead>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="container-fluid shadow-lg mt-2">
+                <div class="row ">
+                    <div class="col border ">
+                        <div class="row mt-2">
+                            <div class="col">
+                                <img src="op.PNG" width="55" height="50" class="float-start">
+                                <lead style="opacity:0.8"><b>Encounter No.</b></lead><br>
+                                <lead>202345565676</lead>
+                            </div>
+                            <div class="col">
+                                <lead style="opacity:0.8"><b>Speciality</b></lead><br>
+                                <lead>Cardiology</lead>
+                            </div>
+                            <div class="col">
+                                <lead style="opacity:0.5"><b>Package Encounter</b></lead><br>
+                                <lead>No</lead>
+                            </div>
+                        </div>
+                        <div class="row mt-2 ">
+                            <div class="col">
+                                <lead style="opacity:0.8"><b>Doctor Name</b></lead><br>
+                                <lead>GHULAM SHABBIR</lead>
+                            </div>
+                            <div class="col">
+                                <lead style="opacity:0.8"><b>Visit Start Date</b></lead><br>
+                                <lead>23/06/2022 16:06</lead>
+                            </div>
+                            <div class="col">
+                                <lead style="opacity:0.8"><b>Visit End Date</b></lead><br>
+                                <lead>-</lead>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col border ms-1">
+                        <div class="row mt- border p-1">
+                            <div class="col-3">
+                                <i class="bi bi-1-circle fs-3 fw-bolder float-start"
+                                    style="color:rgb(144, 94, 201)"></i>
+                                <img src="ev.PNG" height="35" width="35" class="mt-1 float-start ms-1">
+                                <lead class="fw-bolder float-start mt-2 ms-1" style="opacity:0.8">AXA</lead>
+                            </div>
+                            <div class="col-3 mt-2 ">
+                                <i class="bi bi-bookmark fw-bolder" style="opacity:0.5"></i>
+                                <lead class="fw-bolder " style="opacity:0.5">AXA STAR VIP</lead>
+                            </div>
+                            <div class="col-6 mt-2 text-center">
+                                <i class="bi bi-file-earmark fw-bolder" style="opacity:0.5"></i>
+                                <lead class="fw-bolder " style="opacity:0.5">3123 <i class="bi bi-calendar3"></i>
+                                    04/07/2021 <i class="bi bi-calendar3"></i> 04/07/2023</lead>
+                            </div>
+                        </div>
+                        <div class="row   mt-1 p-1">
+                            <div class="col-3">
+                                <i class="bi bi-2-circle fs-3 fw-bolder float-start"
+                                    style="color:rgb(96, 196, 154)"></i>
+                                <img src="contact.PNG" height="40" width="40" class="mt-1 float-start ms-1 ">
+                                <lead class="fw-bolder float-start mt-2 ms-1" style="opacity:0.8">Self Pay</lead>
+                            </div>
+                            <div class="col-3 mt-2">
+                                <i class="bi bi-bookmark fw-bolder" style="opacity:0.5"></i>
+                                <lead class="fw-bolder " style="opacity:0.5">Self Pay Policy</lead>
+                            </div>
+                            <div class="col-4 mt-2 text-center">
+                                <i class="bi bi-file-earmark fw-bolder" style="opacity:0.5"></i>
+                                <lead class="fw-bolder " style="opacity:0.5"> Self <i class="bi bi-calendar3"></i>
+                                    23/06/2022</lead>
+                            </div>
+                            <div class="col mt-2">
+                                <i class="bi bi-pencil-square fw-bolder float-end" style="opacity:0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row border mt-1 p-1">
+                    <div class="col-1 border-end text-center  ">
+                        <i class="bi bi-gear-fill fs-2 " style="color:rgb(144, 94, 201)"></i>
+                    </div>
+                    <div class="col-10 border-left" style="height: 64px;">
+                        <lead class="fw-bolder float-start mt-2 " style="opacity:0.4">No Diagnosis Info</lead>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2 ">
+        <div class="col-3">
+            <div class="container-fluid ms-2 shadow">
+                <div class="row bg-light p-2">
+                    <div class="col">
+                        <i class="bi bi-asterisk"></i>
+                        <lead class="fw-bolder ms-1" style="opacity:0.5"> Approved Summary </lead>
+                    </div>
+                    <div class="col">
+                        <i class="bi bi-eye-slash-fill float-end"></i>
+                        <i class="bi bi-three-dots-vertical float-end"></i>
+                    </div>
+                </div>
+                <div class="overflow" style="height:605px">
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border border-bottom-0 mt-1 bg-white">
+                            <div class="col p-2 border-end">
+                                <img src="bed.PNG" width="45" height="45">
+                            </div>
+                            <div class="col-10">
+                                <lead style="opacity:0.8"><b>23350-INJECTION SHOULDER ARTHROGRAPHT/CT/MRI ARTHH
+                                        (23350)</b></lead><br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        19/07/2022
+                                    </div>
+                                    <div class="col-5">
+                                        19/07/2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 bg-secondary">
+                                <lead class=" text-white float-start mt-2">Charge</lead>
+                            </div>
+                            <div class="col border border-top-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <lead>QTY : 1.000</lead>
+                                    </div>
+                                    <div class="col-8">
+                                        <lead>FIN/Visit Change Cancellation</lead>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <lead>Payershare: 0.000 </lead>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="container-fluid shadow">
+                <div class="row bg-light p-2">
+                    <div class="col">
+                        <i class="bi bi-asterisk"></i>
+                        <lead class="fw-bolder ms-1 " style="opacity:0.5"> Charge Info </lead>
+                    </div>
+                    <div class="col">
+                        <i class="bi bi-three-dots-vertical float-end"></i>
+                    </div>
+                </div>
+                <div class="row" style="background-color:rgb(194, 192, 192)">
+                    <div class="col">
+                        <lead style="opacity:0.6" class="float-start mt-1"><b>To Be Billed</b></lead>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <button class="btn btn border-0 dropdown-toggle float-end" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow" style="height: 570px">
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row">
+                            <div class="col-2 border-end border-bottom">
+                                <lead class="float-start mt-4">87477</lead>
+                            </div>
+                            <div class="col border-bottom">
+                                <div class="row">
+                                    <div class="col">
+                                        <lead style="opacity:0.8"><b style="font-size: 12.5px;">IADNA BORRELIA
+                                                BURGDOREFRI QUANTIFICATION (84477)</b></lead>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-1 me-2" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Qty:1</b></lead>
+                                    </div>
+                                    <div class="col-5" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Base Rate:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-3 " style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Amount:2121.000</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-square float-end"></i>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col" style="opacity: 0.8;">
+                                        <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                                style="font-size: 12.5px;">Charged</b></lead>
+                                    </div>
+                                    <div class="col-2" style="opacity: 0.8;">
+                                        <i class="bi bi-star-fill "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="container-fluid shadow">
+                <div class="row bg-light p-2">
+                    <div class="col">
+                        <i class="bi bi-card-list"></i>
+                        <lead class="fw-bolder ms-1 " style="opacity:0.5"> Billing Info </lead>
+                    </div>
+                    <div class="col">
+                        <i class="bi bi-three-dots-vertical float-end"></i>
+                    </div>
+                </div>
+                <div class="row" style="background-color:rgb(194, 192, 192)">
+                    <div class="col">
+                        <lead style="opacity:0.6" class="float-start mt-1"><b>Pending Collection/Refund</b></lead>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <button class="btn btn border-0 dropdown-toggle float-end" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow" style="height:570px">
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">499</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6">19/07/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 2121.000</b></lead>
+                                </div>
+                                <div class="col text-center">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="container-fluid shadow">
+                <div class="row bg-light p-2">
+                    <div class="col">
+                        <i class="bi bi-card-list"></i>
+                        <lead class="fw-bolder ms-1 " style="opacity:0.5"> Collection Info </lead>
+                    </div>
+                    <div class="col">
+                        <i class="bi bi-three-dots-vertical float-end"></i>
+                    </div>
+                </div>
+                <div class="row" style="background-color:rgb(194, 192, 192)">
+                    <div class="col">
+                        <lead style="opacity:0.6" class="float-start mt-1"><b>Recipet from Patient</b></lead>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <button class="btn btn border-0 dropdown-toggle float-end" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow" style="height:570px">
+                    <div class="ms-1 ">
+                        <div class="row border-bottom">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1 ">
+                        <div class="row border-bottom">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-1 border-start border-3 border-primary">
+                        <div class="row border-bottom ms-1">
+                            <div class="row border-3 ">
+                                <div class="col">
+                                    <i class="bi bi-file-earmark"></i><b style="opacity:0.6">100100065</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-calendar3"></i><b style="opacity:0.6"> 23/06/2022</b>
+                                </div>
+                                <div class="col">
+                                    <i class="bi bi-app float-end"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col">
+                                    <lead style="opacity:0.6"><b>Amount: AED 1000.100</b></lead>
+                                </div>
+                                <div class="col">
+                                    <lead style="background-color:rgb(194, 192, 192)" class="opacity-75"><b
+                                            style="font-size: 12.5px;">Deposit</b></lead>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="shadow-lg bg-white">
+        <div class="footer-copyright text-center p-2">© 2022 Copyright:
+            <img src="iqvia.png" height="25" width="150">
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
